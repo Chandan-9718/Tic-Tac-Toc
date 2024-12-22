@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tictac {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  h1{
+    font-size:40px;
+    margin-bottom: 20px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 35px;
+    border: 2px solid #010101;
+    color: black;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .box:hover {
+    background-color: lightblue;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .box:active {
+    background-color: orange;
+    border: 2px solid #ff4500;
+    transform: scale(0.95);
+  }
+  .winnerClass {
+    background-color: lightgreen;
+    animation: winner-pulse 1s infinite;
+  }
+  
+  @keyframes winner-pulse {
+    0% {
+      box-shadow: 0 0 5px lightgreen;
+    }
+    50% {
+      box-shadow: 0 0 15px lightgreen;
+    }
+    100% {
+      box-shadow: 0 0 5px lightgreen;
+    }
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  button:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+    box-shadow: none;
+  }
